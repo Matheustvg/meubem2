@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>🎁 Surpresas para Você!</title>
+    <link rel="stylesheet" href="surpresa.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>🎉 Você encontrou a sala de presentes! 🎁</h1>
+    <p class="subtitulo">Clique nos presentinhos abaixo para ver as surpresas que preparei com muito amor! 💘</p>
+
+    <div class="presentes">
+        <!-- Presente 1 -->
+        <div class="presente" onclick="abrirPresente(1)">
+            <img src="fotos/presente-removebg-preview.png" alt="Presente 1" id="img-presente-1" >
+            <div class="mensagem" id="mensagem-1">
+                <p> Você é uma garota incrivel</p>
+            </div>
+        </div>
+
+        <!-- Presente 2 -->
+        <div class="presente" onclick="abrirPresente(2)">
+            <img src="fotos/presente-removebg-preview.png" alt="Presente 2" id="img-presente-2">
+            <div class="mensagem" id="mensagem-2">
+                <p> Toma de presente pra você <br>
+                    <img src="fotos/joaninha.png" alt="Foto nossa" class="foto-presente">
+                </p>
+            </div>
+        </div>
+
+        <!-- Presente 3 -->
+        <div class="presente" onclick="abrirPresente(3)">
+            <img src="fotos/presente-removebg-preview.png" alt=Presente 3" id="img-presente-3">
+            <div class="mensagem" id="mensagem-3">
+                <p>🎶 Nossa música está <a href="https://open.spotify.com/intl-pt/track/1DLKuppSYytOuxhtI6KBGu?si=8bbf0e5f409d4a34" target="_blank">aqui 💖</a></p>
+            </div>
+        </div>
+
+        <!-- Presente 4 -->
+        <div class="presente" onclick="abrirPresente(4)">
+            <img src="fotos/presente-removebg-preview.png" alt="Presente 4" id="img-presente-4">
+            <div class="mensagem" id="mensagem-4">
+                <p> Os momentos com você são meu favoritos</p>
+            </div>
+        </div>
+
+        <!-- Presente 5 -->
+        <div class="presente" onclick="abrirPresente(5)">
+            <img src="fotos/presente-removebg-preview.png" alt="Presente 5" id="img-presente-5">
+            <div class="mensagem" id="mensagem-5">
+                <p>💗 Amo passar todos os dias com você</p>
+            </div>
+        </div>
+
+        <!-- Presente 6 -->
+        <div class="presente" onclick="abrirPresente(6)">
+            <img src="fotos/presente-removebg-preview.png" alt="Presente 6" id="img-presente-6">
+            <div class="mensagem" id="mensagem-6">
+                <p>🎈 Surpresa final: <br> <strong>Eu te amo mais que tudo minha garotinha 💕</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <a href="principal.html" class="botao-voltar">🔙 Voltar para a Página Principal</a>
+    <a href="final.html" class="botao botao-proximo">➡️ Próxima Surpresa</a>
+
+</div>
+
+<script>
+    function abrirPresente(id) {
+    const img = document.getElementById(`img-presente-${id}`);
+    const msg = document.getElementById(`mensagem-${id}`);
+    
+    // Troca a imagem do presente fechado pela aberta
+     // Aqui é onde acontece a troca para o presente aberto
+    msg.style.display = 'block';  // Exibe a mensagem do presente
+}
+
+
+
+</script>
+
+</body>
+</html>

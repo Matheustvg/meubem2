@@ -1,0 +1,172 @@
+body {
+    background: linear-gradient(to right, #ff90b3, #80e6ff); /* degrade fofo e animado */
+    font-family: 'Luckiest Guy', cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.presentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.presente {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.presente:hover {
+    transform: scale(1.05);
+}
+
+.presente img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    border: 4px solid #fff;
+}
+
+.mensagem {
+    display: none;
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Fundo branco com transparência */
+    color: #333;
+    padding: 15px;
+    border-radius: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    box-shadow: 0 0 10px #ff69b4;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Sombra para destacar o texto */
+}
+
+
+.foto-presente {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.botao-voltar {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    background-color: #3a86ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 0 #1d4ed8;
+    font-family: 'Luckiest Guy', cursive;
+    transition: transform 0.2s;
+}
+
+.botao-voltar:hover {
+    transform: scale(1.05);
+    background-color: #5cb8ff;
+}
+/* Já define um layout flexível desde o desktop */
+.presentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Cada presente ocupa menos espaço no desktop, mais espaço no mobile */
+.presente {
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presente img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #000;
+    border: 4px solid #fff;
+}
+
+/* Texto das mensagens */
+.mensagem {
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 12px;
+    border-radius: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.1em;
+    text-align: center;
+    box-shadow: 0 0 10px #ff69b4;
+    max-width: 95%;
+}
+
+/* Responsividade específica para celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .subtitulo {
+        font-size: 1.1em;
+        padding: 0 10px;
+    }
+
+    .presente {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .mensagem {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .botao-voltar {
+        font-size: 1em;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+    }
+
+    .foto-presente {
+        width: 100%;
+    }
+}
+.botao-proximo {
+    display: inline-block;
+    margin-top: 50px;
+    font-size: 1.4em;
+    padding: 15px 30px;
+    background-color: #80e6ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 0 #42b9e5;
+    transition: transform 0.2s ease;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.botao-proximo:hover {
+    transform: scale(1.05);
+    background-color: #a4f0ff;
+}

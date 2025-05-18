@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💖 Joguinho do Amor</title>
+  <link rel="stylesheet" href="final.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>💖 Joguinho do Amor!</h1>
+    <h2>Clique em um dos corações e descubra a mensagem escondida!</h2>
+
+    <div class="game-container">
+      <div class="heart" onclick="verificarCoração(1)"></div>
+      <div class="heart" onclick="verificarCoração(2)"></div>
+      <div class="heart" onclick="verificarCoração(3)"></div>
+      <div class="heart" onclick="verificarCoração(4)"></div>
+      <div class="heart" onclick="verificarCoração(5)"></div>
+      <div class="heart" onclick="verificarCoração(6)"></div>
+    </div>
+
+    <div id="mensagem" class="mensagem-final"></div>
+
+    <a href="principal.html" class="botao">🔁 Voltar ao Início</a>
+  </div>
+
+  <script>
+    const coracaoCerto = Math.floor(Math.random() * 6) + 1;
+    let acertou = false;
+
+    function verificarCoração(num) {
+      const msg = document.getElementById('mensagem');
+      if (acertou) return;
+
+      if (num === coracaoCerto) {
+        msg.innerHTML = "🎉 Parabéns! Você encontrou a mensagem secreta: <br><strong> Isso significa que a gente vai casar 💕</strong>";
+        msg.style.display = 'block';
+        acertou = true;
+      } else {
+        msg.innerHTML = "😅 Esse não era... Tente outro coração!";
+        msg.style.display = 'block';
+      }
+    }
+  </script>
+
+  <a href="segredo.html" id="botao-escondido">♥</a>
+
+
+</body>
+</html>

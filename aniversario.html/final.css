@@ -1,0 +1,170 @@
+/* Estilo base do site (já incluído nas outras páginas) */
+body {
+  background: linear-gradient(to right, #ff90b3, #80e6ff);
+  font-family: 'Luckiest Guy', cursive;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 0 #000;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.botao {
+  display: inline-block;
+  font-size: 1.4em;
+  padding: 15px 30px;
+  background-color: #ff5e99;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 5px 0 #c6287f;
+  font-family: 'Luckiest Guy', cursive;
+  transition: transform 0.2s;
+  margin-top: 30px;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+  background-color: #ff85b3;
+}
+
+/* Estilo do joguinho */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px 40px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+
+.heart {
+  width: 100px;
+  height: 100px;
+  background-color: #ff5e99;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #ff5e99;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -50px;
+}
+
+.heart:hover {
+  transform: scale(1.1);
+}
+
+.mensagem-final {
+  display: none;
+  margin-top: 30px;
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Comic Sans MS', cursive;
+  box-shadow: 0 0 20px #ff90b3;
+  text-shadow: none;
+}
+
+
+#segredo {
+  position: center;
+  top: 25px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+
+#segredo:hover {
+  opacity: 0.4;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .game-container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .heart {
+    width: 70px;
+    height: 70px;
+  }
+
+  .heart::before,
+  .heart::after {
+    width: 70px;
+    height: 70px;
+  }
+
+  .heart::before {
+    top: -35px;
+  }
+
+  .heart::after {
+    left: -35px;
+  }
+
+  .mensagem-final {
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  .botao {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+}
